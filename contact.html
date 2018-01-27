@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ulfric LLC</title>
+  <script src="https://use.fontawesome.com/d6609af5e6.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <!-- Bulma Version 0.6.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" integrity="sha256-HEtF7HLJZSC3Le1HcsWbz1hDYFPZCqDhZa9QsCgVUdw=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="public/style.css"/>
+</head>
+<body>
+  <section class="hero is-fullheight is-default is-bold">
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="../">
+            <h1>Ulfric</h1>
+          </a>
+          <span id="nav-toggle" class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <div class="navbar-end">
+            <a href="index.html" class="navbar-item">
+              Home
+            </a>
+            <a href="contact.html" class="navbar-item is-active">
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="columns is-vcentered">
+          <div class="column is-half is-offset-one-quarter">
+              <div class="caption">
+                <p>Have a question? Send us an <strong>email</strong>!</p>
+              </div>
+                <div class="field is-horizontal">
+                        <div class="field-body">
+                          <div class="field">
+                                <a id="submitButton" class="button is-primary is-outlined">Email Us</a>
+                          </div>
+                        </div>
+                    </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="container">
+        <div class="tabs is-centered">
+          <ul>
+            <li>Registered LLC in the state of Florida</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script async type="text/javascript" src="../js/bulma.js"></script>
+  <script type="text/javascript">
+    document.getElementById("nav-toggle").addEventListener ("click", toggleNav);
+    function toggleNav() {
+            var nav = document.getElementById("navbarMenu");
+            var className = nav.getAttribute("class");
+            if(className == "navbar-menu") {
+                nav.className = "navbar-menu is-active";
+            } else {
+                nav.className = "navbar-menu";
+            }
+    }
+</script>
+<script type="text/javascript">
+    document.getElementById("submitButton").addEventListener("click", sendEmail);
+    function sendEmail() {
+        window.open('mailto:billing@ulfric.com');
+    }
+</script>
+</body>
+</html>
